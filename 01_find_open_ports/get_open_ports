@@ -1,2 +1,2 @@
 #!/bin/bash
-zmap -p 5721 -o open_5721.txt -b non-routable.txt 0.0.0.0/0
+zmap -p 5721 -o targets_5721.txt -b non-routable.txt 0.0.0.0/0

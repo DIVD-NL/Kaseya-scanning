@@ -1,0 +1,8 @@
+targets*txt
+results*
+*.csv
+*.json
+*.log
+*.gz
+ports.txt
+hosts
