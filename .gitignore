@@ -4,5 +4,6 @@ results*
 *.json
 *.log
 *.gz
+*.zip
 ports.txt
 hosts
