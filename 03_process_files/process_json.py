@@ -5,7 +5,7 @@ import json
 import xmltodict
 from json_stream_parser import load_iter
 
-print('"host","SystemVersion","PatchLevel","CustomerID","TimeZoneOffset","AgentVersion","from_latest"')
+print('"ip","host","SystemVersion","PatchLevel","CustomerID","TimeZoneOffset","AgentVersion","from_latest"')
 for obj in load_iter(sys.stdin):
 	if "body_env" in obj:
 		try:
@@ -37,12 +37,13 @@ for obj in load_iter(sys.stdin):
 		CustomerID = ""
 		TimeZoneOffset = ""
 		AgentVersion = ""
-	if "versions" in latest:
+	if latest and "versions" in latest:
 		from_latest = latest['versions']['versionInfo']['@versionStr']
 	else:
 		from_latest = ""
 
-	print('"{}","{}","{}","{}","{}","{}","{}"'.format(
+	print('"{}","{}","{}","{}","{}","{}","{}","{}"'.format(
+			obj['ip'],
 			obj['host'],
 			SystemVersion,
 			PatchLevel,
