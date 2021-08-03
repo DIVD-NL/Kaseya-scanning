@@ -7,3 +7,4 @@ results*
 *.zip
 ports.txt
 hosts
+scans/
