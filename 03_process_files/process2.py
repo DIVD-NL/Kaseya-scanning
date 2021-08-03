@@ -56,6 +56,7 @@ for obj in load_iter(sys.stdin):
 				CustomerID = "<unknown>"
 				TimeZoneOffset = "<unknown>"
 				AgentVersion = "<unknown>"
+
 			if "versions" in latest:
 				from_latest = latest['versions']['versionInfo']['@versionStr']
 				include = True
@@ -64,7 +65,7 @@ for obj in load_iter(sys.stdin):
 				from_latest = "<unknown>"
 
 			if include:
-				print('"{}","{}","{}","{}","{}","{}","{}"'.format(
+				print('"{}","{}","{}","{}","{}","{}","{}","{}"'.format(
 						ip,
 						port,
 						SystemVersion,
